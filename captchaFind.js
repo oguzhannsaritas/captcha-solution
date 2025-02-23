@@ -15,7 +15,7 @@ async function getCaptchaSrc(page) {
 
 async function solveCaptcha(captchaSrc) {
     return new Promise((resolve, reject) => {
-        exec(`python3 /Users/oguzhan/Desktop/vize-bot/bot/example.py "${captchaSrc}"`, (error, stdout, stderr) => {
+        exec(`python3 /Users/oguzhan/Desktop/bot/example.py "${captchaSrc}"`, (error, stdout, stderr) => {
             if (error) {
                 reject(`Node.js Hata: ${error.message}`);
                 return;
